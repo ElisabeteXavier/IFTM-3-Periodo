@@ -44,7 +44,10 @@ body {
     background: black;
     z-index: 1;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
+    position: sticky;
+    top: 0;
+
 }
 
 .list-menu{
