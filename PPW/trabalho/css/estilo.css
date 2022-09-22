@@ -44,7 +44,6 @@ body {
     background: black;
     z-index: 1;
     width: 100%;
-    /* position: fixed; */
     position: sticky;
     top: 0;
 
@@ -124,8 +123,6 @@ body {
 
     height: 300px;
     padding: 0 60px;
-   
-
 
 }
 
@@ -226,12 +223,10 @@ body {
   border-radius: 1em;
   background-color: #000000;
   color: aliceblue;
-  border: 1px solid beige;
+  border: none;
+  cursor:pointer;
 }
 
-/* .button-27:disabled {
-  pointer-events: none;
-} */
 
 .button-27:hover {
   background-color: #121111;
