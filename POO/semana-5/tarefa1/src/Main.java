@@ -21,7 +21,7 @@ public class Main {
     }
     public static void subMenu(int posicao ){
 
-        String vet[] ={"Aluno","Professor","Turmas"};
+        String[] vet ={"Aluno","Professor","Turmas"};
         posicao-=1;
 
         System.out.println(" ===" + vet[posicao] +"=== ");
