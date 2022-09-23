@@ -1,10 +1,12 @@
 import br.estudante.iftm.elisabete.ficharios.FicharioAluno;
+import br.estudante.iftm.elisabete.ficharios.FicharioEnturmacao;
 import br.estudante.iftm.elisabete.ficharios.FicharioProfessor;
 import br.estudante.iftm.elisabete.ficharios.FicharioTurma;
 import br.estudante.iftm.elisabete.modelos.Aluno;
 import br.estudante.iftm.elisabete.modelos.Professor;
 import br.estudante.iftm.elisabete.modelos.Turma;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 // completar os menus
 // todos devem ter os metodos cadastrar, alterar, excluir, consultar e relatorio
@@ -16,7 +18,8 @@ public class Main {
         System.out.println("1 - Aluno ");
         System.out.println("2 - Professor ");
         System.out.println("3 - Turmas ");
-        System.out.println("4 - Sair ");
+        System.out.println("4 - Enturmações ");
+        System.out.println("5 - Sair ");
 
     }
     public static void subMenu(int posicao ){
@@ -36,12 +39,13 @@ public class Main {
 
     public static void main(String[] args){
         Scanner entrada = new Scanner(System.in);
-        Aluno alunos [] = new Aluno[40];
-        Professor professores []= new Professor[6];
-        Turma turmas[] = new Turma[10];
-        FicharioAluno ficharioAluno = new FicharioAluno(alunos);
+        ArrayList<Aluno> alunos = new ArrayList<>();
+        ArrayList<Professor> professores = new ArrayList<>();
+        ArrayList<Turma> turmas = new ArrayList<>();
         FicharioProfessor ficharioProfessor =  new FicharioProfessor(professores);
-        FicharioTurma ficharioTurma = new FicharioTurma(turmas, alunos);
+        FicharioTurma ficharioTurma = new FicharioTurma(turmas);
+        FicharioEnturmacao ficharioEnturmacao = new FicharioEnturmacao(turmas,alunos);
+        FicharioAluno ficharioAluno = new FicharioAluno(alunos,ficharioEnturmacao);
 
 
 
@@ -86,7 +90,7 @@ public class Main {
 
                     break; // fim do case aluno
 
-                case 2: // cadastro de aluno
+                case 2:
                     do {
                         subMenu(operacaoGeral);
                         operacaoCadastro = entrada.nextInt();
@@ -117,12 +121,76 @@ public class Main {
                     } while (operacaoCadastro != 6);
 
                     break;
+
+                case 3:
+                    do {
+                        subMenu(operacaoGeral);
+                        operacaoCadastro = entrada.nextInt();
+                        entrada.skip("\n");
+
+                        switch (operacaoCadastro) {
+                            case 1:
+                                ficharioTurma.cadastrar();
+                                break;
+                            case 2:
+                                ficharioTurma.alterar();
+                                break;
+                            case 3:
+                                ficharioTurma.excluir();
+                                break;
+                            case 4:
+                                ficharioTurma.consultar();
+                                break;
+                            case 5:
+                                ficharioTurma.relatorio();
+                                break;
+                            default:
+                                if (operacaoCadastro != 6) {
+                                    System.out.println("Opção inválida.");
+                                }
+                        }
+
+                    } while (operacaoCadastro != 6);
+
+                    break;
+
+                case 4:
+                    do {
+                        System.out.println("1 - Vincular aluno a uma Turma " );
+                        System.out.println("2 - Alterar aluno de turma ");
+                        System.out.println("3 - Desvincular aluno da turma " );
+                        System.out.println("4 - Voltar ao menu principal " );
+
+                        operacaoCadastro = entrada.nextInt();
+                        entrada.skip("\n");
+
+                        switch (operacaoCadastro) {
+                            case 1:
+                               ficharioEnturmacao.vincularAlunoTurma();
+                                break;
+                            case 2:
+//                                ficharioEnturmacao.alteraAlunoTurma
+                                break;
+                            case 3:
+                               ficharioEnturmacao.desvincularAlunoTurma();
+                                break;
+
+                            default:
+                                if (operacaoCadastro != 4) {
+                                    System.out.println("Opção inválida.");
+                                }
+                        }
+
+                    } while (operacaoCadastro != 4);
+
+                    break;
+
                 default:
-                    if (operacaoGeral != 4) {
+                    if (operacaoGeral != 5) {
                         System.out.println("Opção inválida.");
                     }
             }
-        } while ( operacaoGeral != 4);
+        } while ( operacaoGeral != 5);
 
     }
 }

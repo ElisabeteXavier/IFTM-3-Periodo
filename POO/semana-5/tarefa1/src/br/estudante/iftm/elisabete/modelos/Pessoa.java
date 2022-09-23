@@ -1,10 +1,13 @@
 package br.estudante.iftm.elisabete.modelos;
 
+import java.time.LocalDate;
+
 public class Pessoa {
     protected String nome;
     protected String cpf;
     protected String telefone;
     protected String email;
+    protected LocalDate dataNascimento;
 
     public Pessoa(){
 

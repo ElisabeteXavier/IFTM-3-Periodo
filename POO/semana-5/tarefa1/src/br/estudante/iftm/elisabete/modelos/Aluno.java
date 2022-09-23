@@ -1,5 +1,7 @@
 package br.estudante.iftm.elisabete.modelos;
 
+import java.time.LocalDate;
+
 public class Aluno extends Pessoa{
     private String matricula;
 
@@ -22,6 +24,7 @@ public class Aluno extends Pessoa{
         this.telefone = telefone;
         this.cpf = cpf;
         this.email = email;
+//        this.dataNascimento = dataNascimento;
     }
 
     public String toString(){
@@ -31,6 +34,7 @@ public class Aluno extends Pessoa{
                 "\n cpf= " + cpf +
                 "\n telefone= " + telefone +
                 "\n email= " + email +
+//                "\n Data de Nascimento= " + dataNascimento +
                "}";
     }
 

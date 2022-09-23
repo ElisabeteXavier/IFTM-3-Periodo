@@ -1,14 +1,13 @@
 package br.estudante.iftm.elisabete.modelos;
 
-import br.estudante.iftm.elisabete.modelos.Aluno;
+import java.util.ArrayList;
 
 public class Turma {
     private String codigo;
-
     private String nome;
-    private int indiceAlunoTurma = 0;
 
-    private Aluno alunosTurma[];
+    private ArrayList<Aluno> alunosTurmas;
+
     public String getCodigo() {
         return codigo;
     }
@@ -25,24 +24,16 @@ public class Turma {
         this.nome = nome;
     }
 
-    public Aluno[] getAlunosTurma() {
-        return alunosTurma;
+    public ArrayList<Aluno> getAlunosTurmas() {
+        return alunosTurmas;
     }
-
-    public void setAlunosTurma(Aluno aluno) {
-
-        alunosTurma[indiceAlunoTurma]=aluno;
-        indiceAlunoTurma += 1;
-
-    }
-
-    // deve ter um codigo, um nome e um vetor de alunos
 
     public Turma(){};
 
     public Turma(String nome, String codigo){
         this.nome = nome;
         this.codigo = codigo;
+        this.alunosTurmas = new ArrayList<>();
     }
     public String toString(){
         return "TURMA{" +
@@ -50,6 +41,15 @@ public class Turma {
                 "\n código= " + codigo +
                 "}";
     }
+
+    public String consultarAlunosTurma(){
+        return "TURMA" +
+                " nome= " + nome +
+                " código= " + codigo +
+                "\n Alunos{ " + alunosTurmas +
+                "}";
+    }
+
 
 
 }

@@ -1,24 +1,73 @@
 package br.estudante.iftm.elisabete.ficharios;
 
-import br.estudante.iftm.elisabete.modelos.Aluno;
 import br.estudante.iftm.elisabete.modelos.Turma;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FicharioTurma {
     // para manutencao nas turmas
     // deve ter os metodos cadastrar, alterar, excluir, consultar e relatorio
 
-    private Turma turmas[];
+    private final ArrayList<Turma> turmas;
+    private final Scanner entrada;
 
-    private Aluno alunos[];
-    private Scanner entrada;
-
-    public FicharioTurma(Turma turmas[], Aluno alunos[]) {
-        this.alunos = alunos;
+    public FicharioTurma(ArrayList<Turma> turmas) {
         this.turmas = turmas;
         entrada = new Scanner(System.in);
 
+    }
+
+
+
+    public Turma buscaNome(String nome) {
+
+        for (Turma turma : turmas) {
+
+            if (turma != null && turma.getNome().equals(nome)) {
+                return turma;
+            }
+        }
+        return null;
+    }
+
+
+
+    public Turma buscaCodigo(String codigo) {
+
+        for (Turma turma : turmas) {
+
+            if (turma != null && turma.getCodigo().equals(codigo)) {
+                return turma;
+            }
+        }
+        return null;
+    }
+
+    public Turma tiposBuscaTurmas(){
+        int opcoesBusca;
+        String nome,codigo;
+        Turma retornoTurma = null;
+
+        System.out.println("1- Nome");
+        System.out.println("2- Código");
+        opcoesBusca = entrada.nextInt();
+        entrada.skip("\n");
+
+        switch (opcoesBusca) {
+            case 1 -> {
+                System.out.print("Nome: ");
+                nome = entrada.nextLine();
+                retornoTurma = buscaNome(nome);
+            }
+            case 2 -> {
+                System.out.print("Código ");
+                codigo = entrada.nextLine();
+                retornoTurma = buscaCodigo(codigo);
+
+            }
+        }
+        return retornoTurma;
     }
 
 
@@ -33,16 +82,11 @@ public class FicharioTurma {
 
     }
 
-    public void Cadastrar() {
+    public void cadastrar() {
 
         System.out.println("===CADASTRO DA TURMA===");
-        int contador = 0;
 
-        while (turmas[contador] != null) {
-            contador++;
-        }
-        Turma turma = setarTurmas();
-        turmas[contador] = turma;
+        turmas.add(setarTurmas());
 
     }
 
@@ -51,53 +95,86 @@ public class FicharioTurma {
 
         System.out.println("===INFORME O CÓDIGO DA TURMA:===");
         String retornoCodigo = entrada.nextLine();
-        for (int i = 0; i < turmas.length; i++) {
-            if (turmas[i].getCodigo().equals(retornoCodigo))
-                System.out.println(turmas[i]);
+        for (Turma turma : turmas) {
+            if (turma.getCodigo().equals(retornoCodigo))
+                System.out.println(turma.consultarAlunosTurma());
         }
 
 
+    }
+
+    public void alterar() {
+        String nome, codigo;
+        int alteracaoFeita;
+
+
+        System.out.println("===BUSCAR TURMA A ALTERAR POR: ===");
+        Turma turma = tiposBuscaTurmas();
+
+        if(turma != null){
+
+
+            System.out.println("O que deseja alterar? ");
+            System.out.println("1 - Nome da turma ");
+            System.out.println("2 - Código da turma ");
+
+            alteracaoFeita = entrada.nextInt();
+            entrada.skip("\n");
+
+            switch (alteracaoFeita) {
+                case 1 -> {
+                    System.out.print("Novo Nome: ");
+                    nome = entrada.nextLine();
+                    turma.setNome(nome);
+                }
+                case 2 -> {
+                    System.out.print("Novo Código: ");
+                    codigo = entrada.nextLine();
+                    turma.setCodigo(codigo);
+                }
+            }
+            }
+        else
+            System.out.println("Turma não encontrada!");
+    }
+
+    private boolean turmaVazia(Turma turma){
+        return turma.getAlunosTurmas().isEmpty();
+    }
+
+    public void excluir(){
+
+        Turma turma = tiposBuscaTurmas();
+        if(turmaVazia(turma)) {
+            System.out.println("Confirma a exclusão?");
+            System.out.println("1- Sim\n 2-Não");
+            int confirmacao = entrada.nextInt();
+            entrada.skip("\n");
+            if (turma != null) {
+                if (confirmacao == 1) {
+                    turmas.remove(turma);
+                    System.out.println("Turma excluída!");
+                } else System.out.println("Operação cancelada, turma não excluída!");
+            } else
+                System.out.println("Turma não encontrada!");
+        }else System.out.println("Não foi possível excluir a turma pois ela contém alunos vinculados!");
     }
 
 
     public void relatorio() {
 
         System.out.println("[Relatório de TURMAS]");
-        for (int j = 0; j < turmas.length; j++) {
-            if (turmas[j] != null) {
-                System.out.println(turmas[j]);
+        for (Turma turma : turmas) {
+            if (turma != null) {
+                System.out.println(turma);
                 System.out.println("---------------------");
             }
 
         }
-
     }
-
-    public void enturmar() {
-
-        System.out.println("Qual aluno deseja enturmar?");
-        String alunoEnturmar = entrada.nextLine();
-        System.out.println("Escolha uma Turma:");
-        for (int j = 0; j < turmas.length; j++) {
-            if (turmas[j] != null) {
-                System.out.println((j + 1) + "- " + turmas[j].getNome());
-                System.out.println("---------------------");
-            }
-        }
-        System.out.println("Em qual turma ele vai?");
-        int operacaoturma = entrada.nextInt();
-        entrada.skip("\n");
-        for (int j = 0; j < alunos.length; j++) {
-
-            if (alunos[j].getNome().equals(alunoEnturmar)) {
-                turmas[operacaoturma - 1].setAlunosTurma(alunos[j]);
-
-
-            }
-        }
-
-    }
-
 }
+
+
+
 
 
