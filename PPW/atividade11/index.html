@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .cabecalho {
+        height: 60px;
+        border: 1px solid red;
+      }
+      .lateral {
+        float: left;
+        border: 1px solid blue;
+        width: 20%;
+        box-sizing: border-box;
+      }
+      .conteudo {
+        float: left;
+        border: 1px solid green;
+        width: 80%;
+        box-sizing: border-box;
+      }
+
+      /*  Ou usar o claerFix ou colocar conteudo e lateral em uma div  e fazer o after .nomedadiv::after{
+        content: " ";
+        clear:both;
+        display: block;
+      } */
+
+      .clearFix{
+        clear: both;
+
+      }
+
+      .rodape {
+        height: 60px;
+        border: 1px solid red;
+        
+      }
+    </style>
+    <div class="cabecalho"></div>
+    <div class="lateral">
+      <ul>
+        <li>Lorem ipsum .</li>
+        <li>Ut explicabo .</li>
+        <li>Dolorum, blan!</li>
+        <li>Voluptates ad.</li>
+      </ul>
+    </div>
+    <div class="conteudo">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint vitae,
+        doloremque ipsam quaerat ipsa vel ea dolor, non autem, adipisci
+        blanditiis ad? Eveniet pariatur minima obcaecati, explicabo sequi
+        aperiam voluptate.
+      </p>
+      <p>
+        Magni modi ab, saepe inventore necessitatibus eveniet natus neque itaque
+        veniam, architecto sequi possimus quas, ullam molestias tenetur optio
+        sint? Voluptatibus obcaecati amet alias nam, dolorum aliquam labore
+        deserunt voluptate.
+      </p>
+    </div>
+    <div class="clearFix"></div>
+    <div class="rodape"></div>
+
+  </body>
+</html>
