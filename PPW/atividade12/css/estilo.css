@@ -1,0 +1,40 @@
+body{
+    background-color: rebeccapurple;
+}
+
+
+
+ /* .form-flex form {
+    margin: 0 auto;
+    background-color: red;
+    width: 250px;
+    height: 200px;
+    margin-top: calc(50vh - 75px);
+    ou 
+     quando n tinha o calc usava margin negativa, , puxando a metade da altura e largura 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -125px;
+    
+}   */
+/* ou */
+
+.form-flex{
+    min-height: 100vh; /* pega a altura da tela td e ai alinha ela na eltura correta*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.form-flex form{
+    background-color: #cecece;
+    border: 1px solid green;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    /* y x opacidade tamanho */
+    box-shadow: 0px 2px 20px -5px #000;
+}
