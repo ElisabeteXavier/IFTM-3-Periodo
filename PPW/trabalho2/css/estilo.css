@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+/* background-image: linear-gradient(0deg,transparent 50%,rgba(0,0,0,.7)),radial-gradient(50% 100%,transparent 0,rgba(0,0,0,.7) 100%); */
+/* background: rgba(0,0,0,.5); */
+
+.textoprincipal{
+    background-image: url(../imagens/img-inicial.jpg);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    flex-direction: column;
+    font-family:  Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;    
+     height: 100vh;
+     box-shadow: inset 0px 0px 900px 140px rgb(0 0 0);
+
+    
+}
+
+.textoprincipal h1{
+    font-size: 4em;
+    text-align: center;
+    max-width: 800px;
+}
+
+.menu {
+    display: flex;
+    height: 3em;   
+    margin: 2em;
+    position: absolute;
+
+}
