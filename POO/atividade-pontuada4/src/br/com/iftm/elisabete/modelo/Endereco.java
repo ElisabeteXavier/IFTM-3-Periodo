@@ -1,4 +1,4 @@
-package br.com.iftm.elisabete;
+package br.com.iftm.elisabete.modelo;
 
 public class Endereco {
 
