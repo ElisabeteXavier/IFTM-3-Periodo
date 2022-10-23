@@ -5,7 +5,7 @@
     color: white;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     outline: none;
-}
+} 
 
 
 body{
@@ -26,7 +26,7 @@ body{
     background-attachment: fixed;
     flex-direction: column;
     font-family: Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
-    height: 95vh;
+    height: 97vh;
     text-align: center;
     border-bottom: 0.5em solid #22222e;
     
@@ -34,7 +34,7 @@ body{
 }
 
 .text{
-    margin-top: 123px;
+    margin-top: 163px;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@ body{
     align-items: center;
 }
 .background-container{
-    background-image: linear-gradient(0deg,transparent 48%,rgba(0,0,0,0.7)),radial-gradient(50% 0%,transparent 114%,rgba(0,0,0,0.5) 100%),linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.8));
+    background-image: linear-gradient(0deg,transparent 48%,rgba(0,0,0,0.7)),radial-gradient(45% 33%,transparent 87%,rgba(0,0,0,0.5) 140%),linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.8));
     position: absolute;
     width: 100%;
     height: 96%;
@@ -97,34 +97,27 @@ body{
 
 .menu-select select{
     display: flex;
-    height: 38px;   
     margin-left: 300px;
     background-color: rgba(0,0,0,0.5) ;
-    border-radius: 3px;
+    border-radius: 2px;
     border: 1px solid  white;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
     cursor: pointer;
-    padding: 0 10px;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    background-size: 1em;
-    display: block;
+    padding: 10px 2px;
+    font-size: 0.8em;
+    
 }
 
 .menu-botao button{
     
     display: flex;
-    height: 38px;     
     margin: 2em;
     background-color: rgb(231, 79, 25);
     border-radius: 3px;
     align-items: center;
-    font-size: 18px;
-    padding: 6px 20px;
+    font-size: 1rem;
+    padding: 7px 17px;
     border: none;
     margin-right: 4em;
     cursor: pointer;
@@ -148,7 +141,7 @@ body{
 .inputemail button{
     font-size: 1.6em;
     background-color: rgb(231, 79, 25);
-    padding: 0.6em;
+    padding: 0.8em;
     width: 7em;
     border: none;
     font-family: 'Inter', sans-serif;
@@ -201,10 +194,7 @@ p{color: white;}
     
 }
 
-.background-secundario{
 
-
-}
 .video{
     position: relative;
     margin-top: -380px;
@@ -260,17 +250,6 @@ p{color: white;}
 }
 
 
-/*.expandir input[type="checkbox"] {
-    appearance: none;
-}*/
-.expandir input{
-    appearance: none;
-}
-
-.expandir input[type="checkbox"]:checked ~ span {
-    height: auto; 
-}
-
 
 .perguntas{
     display: flex;
@@ -280,26 +259,30 @@ p{color: white;}
     padding: 4em;
 }
 
-.expandir span {
-    display: block;
+
+.expandir {
     height: 3.4em;
-    background-color: #13151d;
-    padding:0 1em;
+    background-color: #303030;
+    padding: 0 2em;
     font-size: 1.4em;
-    overflow: hidden;
-    position: relative;
-}
-
-
-
-
-.expandir span:hover{
+    /* overflow: hidden; */
+    /* position: relative; */
+    align-items: center;
+    width: 775px;
+    text-align: center;
+    /* display: flex; */
+    margin-top: 10px;
+    width: 55vw;
     cursor: pointer;
+    
+}
+.perguntas p{
+    margin-bottom: 15px;
 }
 
 .perguntas h2{
-    font-size: 2.5em;
-    margin-bottom: 0.3em;
+    font-size: 3.125rem;
+    margin-bottom: 30px;
 }
 .teste{
     display: flex;
@@ -308,5 +291,111 @@ p{color: white;}
     font-size: 1em;
     align-items: center;
     height: 10vh;
-    padding: 0 50px;
+    padding-left: 0px;    
+}
+
+
+
+#resposta-1{
+    display: none;
+    background-color: #303030;
+    width: 55vw;
+    padding: 31px;
+    margin-top: 6px;
+    font-size: 1.7em;
+}
+
+#resposta-2{
+    display: none;
+    background-color: #303030;
+    width: 55vw;
+    padding: 31px;
+    margin-top: 6px;
+    font-size: 1.7em;
+}
+
+#resposta-3{
+    display: none;
+    background-color: #303030;
+    width: 55vw;
+    padding: 41px;
+    margin-top: 6px;
+    font-size: 1.7em;
+}
+
+#resposta-4{
+    display: none;
+    background-color: #303030;
+    width: 55vw;
+    padding: 31px;
+    margin-top: 6px;
+    font-size: 1.7em;
+}
+
+#resposta-5{
+    display: none;
+    background-color: #303030;
+    width: 55vw;
+    padding: 31px;
+    margin-top: 6px;
+    font-size: 1.7em;
+}
+
+#resposta-6{
+    display: none;
+    background-color: #303030;
+    width: 55vw;
+    padding: 31px;
+    margin-top: 6px;
+    font-size: 1.7em;
+}
+
+.texto-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    border-bottom: 0.5em solid #222222;
+    
+
+}
+
+.textofinal{
+    margin: 0px 193.8px;
+    padding: 70px 45px 14px 45px;
+}
+
+.textofinal p{
+    padding: 10px 56px;
+    color: #737373;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+      
+}
+
+.textofinal select{
+    margin: 12px 54px;
+    height: 53px;
+    font-size: 15px;
+    width: 15%;
+    padding: 0 10px;
+    background-color: rgb(0 0 0);
+}
+
+.final {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.final li{
+    color: #737373;
+    list-style:none; 
+    padding: 8px 0;
+}
+#ultimo{
+    font-size: 13px;
+    color: #737373;
 }
