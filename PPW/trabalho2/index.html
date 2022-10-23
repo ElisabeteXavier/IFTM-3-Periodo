@@ -1,29 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/estilo.css">
-</head>
-<body>
-    <div class="menu">
-        <img id="logo" src="imagens/logo-netflix.png" alt="">
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
 
+  <body>
+    <div class="textoprincipal">
+      <div class="header">
+        <div class="left-menu-item">
+          <div class="menu">
+            <img id="logo" src="imagens/logo-netflix.png" alt="" />
+          </div>
+        </div>
+
+        <div class="right-menu-item">
+          <div class="menu-select">
+            <select id="">
+              <option value="">
+                <!-- <img src="./imagens/globe-solid.svg""> -->
+                🌐 Português</option>
+              <option value="">🌐 English</option>
+            </select>
+          </div>
+
+          <div class="menu-botao">
+            <button>Entrar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="background-container"></div>
+      
+      <div class="text">
+        <h1>Filmes, séries e muito mais. Sem limites.</h1>
+        <h2>Assista onde quiser. Cancele quando quiser.</h2>
+        <h3>
+          Pronto para assistir? Informe seu email para criar ou reiniciar sua
+          assinatura.
+        </h3>
+
+        <div class="inputemail">
+          <input type="email" name="email" id="idemail" placeholder="Email" />
+          <button for="idemail">Vamos lá ></button>
+        </div>
+      </div>
     
-
-    <!-- <div>
-        <img src="imagens/img-inicial.jpg" alt="">
-    </div> -->
-
-</div>
-<div class="textoprincipal">
-    <h1>Filmes, séries e muito mais. Sem limites.</h1>
-<h2>Assista onde quiser. Cancele quando quiser.</h2>
-<h3>Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>    
-</div>
-
     
-</body>
+    </div>
+
+    <div class="textosecundario">
+      <div class="corpo">
+        <p id="titulosecundario">Aproveite na TV.</p>
+        <p>
+          Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+          aparelhos de Blu-ray e outros dispositivos.
+        </p>
+      </div>
+
+      <div class="televisao-container">
+        <div class="background-secundario">
+          <img src="./imagens/tv.png" alt="" />
+        </div>
+
+        <div class="video">
+          <video autoplay loop>
+            <source src="imagens/video-tv-0819.m4v" />
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="textosecundario">
+      <div class="retangulo-container">
+        <div>
+          <img src="./imagens/mobile-0819.jpg" alt="" />
+        </div>
+
+        <div class="retangulo">
+          <img src="./imagens/boxshot.png" alt="" />
+
+          <div>
+            <p>Stranger Things</p>
+            <p id="download-retangulo">Download em andamento...</p>
+          </div>
+          <img id="download-icon" src="./imagens/download-icon.gif " alt="" />
+        </div>
+      </div>
+
+      <div class="corpo">
+        <p>Baixe séries para assistir offline.</p>
+        <p>Salve seus títulos favoritos e sempre tenha algo para assistir.</p>
+      </div>
+    </div>
+
+    <div class="textosecundario">
+      <div class="corpo">
+        <p id="titulosecundario">Assista quando quiser.</p>
+        <p>
+          Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por
+          isso.
+        </p>
+      </div>
+
+      <div class="televisao-container">
+        <div class="background-secundario">
+          <img src="./imagens/device-pile.png" alt="" />
+        </div>
+
+        <div class="video">
+          <video autoplay loop>
+            <source src="imagens/video-devices.m4v" />
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="textosecundario">
+      <img id="ultima" src="./imagens/ultima.png" alt="" />
+
+      <div class="corpo">
+        <p id="titulosecundario">Crie perfis para crianças.</p>
+        <p>
+          Deixe as crianças se aventurarem com seus personagens favoritos em um
+          espaço feito só para elas, sem pagar a mais por isso.
+        </p>
+      </div>
+    </div>
+
+    <div class="textosecundario">
+
+
+      <!-- <div class="pergunta-section">
+        <h1>Perguntas Frequentes</h1>
+      </div>
+     
+      <div class="pergunta-section">
+        <h2>O que é a Netflix?</h2>
+      </div>
+      
+      <div class="pergunta-section">
+        <h2>Quanto custa a Netflix?</h2>
+      </div>
+      
+      <div class="pergunta-section">
+        <h2>Onde posso assistir?</h2>
+      </div> -->
+
+      <div class="perguntas">
+        <h2>Perguntas Frequentes</h2>
+        <label class="expandir">
+            <input type="checkbox" id="chk-1">
+            <span>
+              <div class="teste"> <h4>O que é a Netflix?</h4><div>+</div></div>
+               
+                <ul id="inp-ul1">   
+                  <li>Experiência premium sem intervalos comerciais.</li>
+                  <li>As melhores histórias da Disney, Pixar, Marvel, Star Wars e National Geographic, tudo em um só lugar.</li>
+                </ul>
+
+            </span>
+        </label>
+        </div>
+     
+    </div>
+  </body>
 </html>
