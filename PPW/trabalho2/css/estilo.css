@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: sans-serif;
+    font-weight: 400;
     outline: none;
 } 
 
@@ -89,7 +90,7 @@ body{
 
 .menu {
     display: flex;
-    height: 45px;
+    height: 36px;
     margin: 20px;
     margin-left: 55px;
 
@@ -113,7 +114,7 @@ body{
     
     display: flex;
     margin: 2em;
-    background-color: rgb(231, 79, 25);
+    background-color: #e30d12;
     border-radius: 3px;
     align-items: center;
     font-size: 1rem;
@@ -139,9 +140,9 @@ body{
 }
 
 .inputemail button{
-    font-size: 1.6em;
-    background-color: rgb(231, 79, 25);
-    padding: 0.8em;
+    font-size: 22px;
+    background-color: #e30d12;
+    padding: 1.1em 0;
     width: 7em;
     border: none;
     font-family: 'Inter', sans-serif;
@@ -204,6 +205,8 @@ p{color: white;}
 }
 
 #titulosecundario{
+    text-align: left;
+    width: 544px;
     font-size: 50px;
     margin: 0.67em 0;
     font-family: sans-serif;
