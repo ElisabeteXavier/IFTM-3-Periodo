@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: sans-serif;
     font-weight: 400;
     outline: none;
@@ -10,14 +10,14 @@
 
 
 body{
-    background-color: rgb(0 0 0);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
 }
 
 .textoprincipal{
     background-image: url(../imagens/img-inicial.jpg);
-    color: white;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -27,7 +27,7 @@ body{
     background-attachment: fixed;
     flex-direction: column;
     font-family: Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
-    height: 97vh;
+    height: 98vh;
     text-align: center;
     border-bottom: 0.5em solid #22222e;
     
@@ -47,7 +47,7 @@ body{
     background-image: linear-gradient(0deg,transparent 48%,rgba(0,0,0,0.7)),radial-gradient(45% 33%,transparent 87%,rgba(0,0,0,0.5) 140%),linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.8));
     position: absolute;
     width: 100%;
-    height: 96%;
+    height: 100%;
    
 }
 
@@ -134,7 +134,7 @@ body{
 }
 .inputemail input{
     width: 40em;
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 10px;
     
 }
@@ -151,7 +151,7 @@ cursor: pointer;
     /* font-family: 'Inter', sans-serif; */
 
 }
-p{color: white;}
+p{color: rgb(255, 255, 255);}
 /* 
 .linha{
     background-color: rgb(29, 29, 32);
@@ -175,14 +175,29 @@ p{color: white;}
 }
 
 .televisao-container{
-    margin-top: -150px;
-    margin-left: 42px;
+    /* margin-top: -150px;
+    margin-left: 42px; */
+    position: relative;
+    right: 0;
+    width: 100%;
+    margin-top: -383px;
     
 }
-.textosecundario img{
-    border: 0;
+/* .textosecundario img{
+    /* border: 0;
     height: auto;
-    max-width: 100%;
+    max-width: 100%; 
+} */
+
+.background-secundario{
+    position: absolute;
+    z-index: 1;
+
+}
+.background-secundario img{
+    height: 400PX;
+    width: auto;
+    margin-left: 30px;
 }
 
 .corpo{
@@ -197,11 +212,18 @@ p{color: white;}
 
 
 .video{
-    position: relative;
+    /* position: relative;
     margin-top: -380px;
     margin-left: 4.8em;
-    z-index: -1;
+    z-index: -1; */
+    position: absolute;
+    left: 100px;
+    top:80px;
 
+}
+
+.video video{
+    width: 395px;
 }
 
 #titulosecundario{
@@ -228,7 +250,7 @@ p{color: white;}
     align-items: center;
 
     margin-top: -150px;
-    margin-left: 58px;
+    margin-left: 126px;
     /* overflow: hidden; */
     padding: 10px;
 }
@@ -402,3 +424,27 @@ p{color: white;}
     font-size: 13px;
     color: #737373;
 }
+
+.video-imagem{
+    position: relative;
+    right: 0;
+    width: 100%;
+    margin-top: -480px;
+
+}
+
+.imagem{
+    position: absolute;
+    z-index: 1;
+}
+
+.video-dois{
+    position: absolute;
+    left: 120px;
+    top:50px;
+}
+
+.video-dois video{
+    width: 395px;
+}
+
