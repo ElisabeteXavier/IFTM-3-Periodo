@@ -57,7 +57,8 @@
 
 
 .cont-2{
-    display: flex;
+    /* display: flex; */
+    padding: 30px;
   
 
 }
@@ -82,7 +83,7 @@
 
 .cont-3{
 
-    display: flex;
+    /* display: flex; */
     padding: 80px;
 
 }
@@ -119,7 +120,7 @@
       flex-direction: column;
     } */
 
-    .b-2, .text,.cont-1 ul, .cont-2,.cont-3{
+    .b-2, .text,.cont-1 ul, .cont-2,.cont-3,.cont-2 img{
         width: 100%;
         flex-direction: column;
         padding: 10px;
@@ -128,6 +129,9 @@
   .cont-1 ul li{
     width: 100%;
    text-align: center;
+  }
+  .cont-3 img{
+    width: 100%;
   }
 
 }
