@@ -115,12 +115,9 @@
 }
 
 @media only screen and (max-width: 760px) {
-    /* For mobile phones: */
-    /* [class*="a-"] {
-      flex-direction: column;
-    } */
 
-    .b-2, .text,.cont-1 ul, .cont-2,.cont-3,.cont-2 img{
+
+    .b-2, .text,.cont-1 ul, .cont-2,.cont-3{
         width: 100%;
         flex-direction: column;
         padding: 10px;
