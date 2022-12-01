@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho">
+        <img src="../imagens/logo.png" alt="" />
+        <div class="cabecalho-text">
+          <p>Home</p>
+          <p>Sobre</p>
+          <p>oiiii</p>
+        </div>
+      </div>
+    </header>
+    <div class="seta">
+      <a href="../produto/homeproduto.html"
+        ><img src="../imagens/seta.png" alt=""
+      /></a>
+    </div>
+    <section class="centro">
+      <form class="label" onsubmit="cadastrarProduto()">
+        <h1>CADASTRO DE PRODUTO</h1>
+
+        <div class="label-input">
+          <label for="nome">Nome</label>
+          <input name="nome" id="nome" type="text" />
+        </div>
+        <div class="label-input">
+          <label for="estoque">Quantidade Estoque</label>
+          <input name="estoque" id="estoque" type="number" />
+        </div>
+        <div class="label-input">
+          <label for="valor">Valor Unitário</label>
+          <input name="valor" id="valor" type="number" />
+        </div>
+        <div class="label-input"><button type="submit">Enviar</button></div>
+      </form>
+    </section>
+
+    <script src="./javascript/post-produto.js"></script>
+  </body>
+</html>
