@@ -12,7 +12,7 @@ function fazPost(url, body) {
 }
 
 function cadastrarProduto() {
-  // event.preventDefault();
+  event.preventDefault();
 
   let url = "http://127.0.0.1:8080/produtos";
 
