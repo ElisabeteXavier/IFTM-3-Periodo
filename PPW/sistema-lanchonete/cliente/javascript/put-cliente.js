@@ -13,29 +13,29 @@ function fazPut(url, body) {
   
   function atualizarCliente() {
     event.preventDefault();
-    var clienteId = document.getElementById("").value
+    var clienteId = document.getElementById("cliente-atualizar").value
   
-    let url = `http://127.0.0.1:8080/clientes/${clieteId}`;
+    let url = `http://127.0.0.1:8080/clientes/${clienteId}`;
   
-  let nome = document.getElementById("nome").value;
-  let cpf = document.getElementById("cpf").value;
-  let telefone = document.getElementById("telefone").value;
-  let email = document.getElementById("email").value;
-  let nascimento = document.getElementById("datanasc").value;
-  let select = document.getElementById("cidade");
-  let cidadeId = select.options[select.selectedIndex].value;
+  var nome = document.getElementById("nome").value;
+  var cpf = document.getElementById("cpf").value;
+  var telefone = document.getElementById("telefone").value;
+  var email = document.getElementById("email").value;
+  var nascimento = document.getElementById("datanasc").value;
+  var select = document.getElementById("cidade");
+  var cidadeId = select.options[select.selectedIndex].value;
+  var dado = fazGet(`http://127.0.0.1:8080/cidades/${cidadeId}`)
+  var cidade = JSON.parse(dado);
+  console.log(cidade);
    
-  
-    console.log(nome);
-    console.log(estoque);
   
     body = {
       "nome": nome,
-      "cpf": cpf,
+      // "cpf": cpf,
       "telefone": telefone,
       "email": email,
       "dataNascimento": nascimento, 
-      "cidade": cidadeId
+      "cidade": cidade
   
     };
   

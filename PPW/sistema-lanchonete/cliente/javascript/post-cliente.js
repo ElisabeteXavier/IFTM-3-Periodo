@@ -36,7 +36,7 @@ function cadastrarCliente() {
     "telefone": telefone,
     "email": email,
     "dataNascimento": nascimento, 
-    "cidade": cidadeId
+    "cidade": cidade
 
   };
 

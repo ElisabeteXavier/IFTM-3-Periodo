@@ -42,11 +42,11 @@ function fazGet(url){
     
     function main(){
        aux = fazGet("http://127.0.0.1:8080/clientes")
-       produtos = JSON.parse(aux);
-       console.log(produtos)
+       let clientes = JSON.parse(aux);
+       console.log(clientes)
        let tabela = document.getElementById("tabela")
     
-       produtos.forEach(element => {
+       clientes.forEach(element => {
         let linha = criaLinha(element);
         tabela.appendChild(linha)
     

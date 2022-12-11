@@ -25,7 +25,7 @@
     </div>
     <section class="centro">
        
-             <form class="label" onsubmit="cadastrarCliente()">
+             <form class="label" onsubmit="atualizarCliente()">
                 <h1>ATUALIZAÇÃO DE CLIENTE</h1>
                
                     <div class="label-input">
@@ -39,7 +39,7 @@
                         </div>
                         <div class="label-input">
                             <label for="cpf">CPF</label>
-                            <input name="cpf" id="cpf" type="text">
+                            <input readonly name="cpf" id="cpf" type="text">
                         </div>
                         <div class="label-input">
                             <label for="telefone">Telefone</label>
@@ -64,8 +64,9 @@
             </form> 
     </section>
 
-    <script src="./javascript/get-atualizar-cliente.js"></script>
+    <script src="./javascript/get-atualizar-deletar-cliente.js"></script>
     <script src="./javascript/get-cidades.js"></script>
+    <script src="./javascript/put-cliente.js"></script>
 </body>
 
 </html>
