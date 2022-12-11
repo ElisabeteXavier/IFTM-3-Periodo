@@ -13,17 +13,20 @@ function fazGet(url){
        tdTelefone = document.createElement("td");
        tdemail = document.createElement("td");
        tdDataNasc = document.createElement("td");
+       tdCidade = document.createElement("td");
        tdNome.innerHTML = cliente.nome;
        tdCpf.innerHTML = cliente.cpf;
        tdTelefone.innerHTML = cliente.telefone;
        tdemail.innerHTML = cliente.email;
        tdDataNasc.innerHTML = cliente.dataNascimento;
+       tdCidade.innerHTML = cliente.cidade.nome;
     
        linha.appendChild(tdNome);
        linha.appendChild(tdCpf);      
        linha.appendChild(tdTelefone);
        linha.appendChild(tdemail);
        linha.appendChild(tdDataNasc);
+       linha.appendChild(tdCidade)
     
        return linha;
     

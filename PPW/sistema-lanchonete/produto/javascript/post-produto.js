@@ -19,7 +19,7 @@ function cadastrarProduto() {
   let nome = document.getElementById("nome").value;
   let estoque = document.getElementById("estoque").value;
   let valor = document.getElementById("valor").value;
-  let status = "true";
+  
 
   console.log(nome);
   console.log(estoque);
@@ -27,8 +27,7 @@ function cadastrarProduto() {
   body = {
     "nome": nome,
     "qtdEstoque": estoque,
-    "valorUnitario": valor,
-    "ativo": status
+    "valorUnitario": valor
 
   };
 
