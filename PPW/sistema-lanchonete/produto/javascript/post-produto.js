@@ -3,10 +3,19 @@ function fazPost(url, body) {
   let request = new XMLHttpRequest();
   request.open("POST", url, true);
   request.setRequestHeader("Content-type", "application/json");
-  request.send(JSON.stringify(body));
+  var teste = request.send(JSON.stringify(body));
 
   request.onload = function(){
     console.log(this.responseText)
+
+    let dado = this.responseText;
+    let resposta= JSON.parse(dado);
+    if(this.status == "200"|| this.status == "201"){
+      alert("CADASTRO REALIZADO COM SUCESSO!");
+
+  }else{
+    alert(resposta.mensagem );
+  }
   }
    return request.responseText
 }
@@ -34,4 +43,3 @@ function cadastrarProduto() {
   fazPost(url, body);
 }
 
-function main() {}
